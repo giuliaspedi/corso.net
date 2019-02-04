@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E96E1F4B-5CEC-4606-862B-E7FC7E298BE1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Esercizi.Net.ConsoleApp</RootNamespace>
-    <AssemblyName>Esercizi.Net.ConsoleApp</AssemblyName>
+    <ProjectGuid>{76217C4F-611F-4F43-942C-A5F812EF0671}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>esercizi.Net.BusinessLogic</RootNamespace>
+    <AssemblyName>esercizi.Net.BusinessLogic</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="IFactory.cs" />
+    <Compile Include="ITransactionFactory.cs" />
+    <Compile Include="ITransazione.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransactionFactory.cs" />
+    <Compile Include="Transazione.cs" />
+    <Compile Include="TransazioneC.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\esercizi.Net.BusinessLogic\esercizi.Net.BusinessLogic.csproj">
-      <Project>{76217c4f-611f-4f43-942c-a5f812ef0671}</Project>
-      <Name>esercizi.Net.BusinessLogic</Name>
-    </ProjectReference>
+    <Compile Include="TransazioneGK.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
