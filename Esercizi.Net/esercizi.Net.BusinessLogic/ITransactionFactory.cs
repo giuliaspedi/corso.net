@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace esercizi.Net.BusinessLogic
 {
+    // sto implementando una factory del tipo ITransazione
     public interface ITransactionFactory : IFactory<ITransazione>
     {
     }
