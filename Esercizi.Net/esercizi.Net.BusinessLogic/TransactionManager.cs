@@ -12,7 +12,7 @@ namespace esercizi.Net.BusinessLogic
          
         public ITransactionFactory Factory { get; } //se una funzione ha solo il metodo get si può definire nel costruttore
         public List<ITransazione> Transazioni { get; }
-        public TransactionManager() : this(new TransactionFactory());
+        public TransactionManager() : this(new TransactionFactory()) { }
         public TransactionManager(ITransactionFactory factory)
         {
             Factory = factory;
@@ -31,12 +31,13 @@ namespace esercizi.Net.BusinessLogic
 
         public ITransazione DeleteTransaction (int index)
         {
+            Transazioni.RemoveAt(index);
             return null;
         }
 
         public IEnumerable<ITransazione> GetTransaziones()
         {
-            return null;
+            return Transazioni;
         }
     }
 }

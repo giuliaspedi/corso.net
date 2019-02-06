@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CategoryFactory.cs" />
+    <Compile Include="CategoryManager.cs" />
+    <Compile Include="ICategory.cs" />
     <Compile Include="IFactory.cs" />
+    <Compile Include="IFactoryC.cs" />
     <Compile Include="ITransactionFactory.cs" />
     <Compile Include="ITransazione.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoTransazione.cs" />
     <Compile Include="TransactionFactory.cs" />
     <Compile Include="TransactionManager.cs" />
     <Compile Include="Transazione.cs" />

@@ -8,8 +8,8 @@ namespace esercizi.Net.BusinessLogic
 {
     public interface ITransazione
     {
-        string Tipo { get; set; }
-        string Categoria { get; set; }
+        TipoTransazione Tipo { get; set; }
+        ICategory Categoria { get; set; }
         string Descrizione { get; set; }
         DateTime DataTransazione { get; set; }
         decimal Importo { get; set; }

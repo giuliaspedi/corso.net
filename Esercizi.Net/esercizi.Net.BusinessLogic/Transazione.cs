@@ -7,26 +7,12 @@ using System.Threading.Tasks;
 namespace esercizi.Net.BusinessLogic
 {
     public abstract class Transazione : ITransazione
-    {
-        private string _tipo;
-        public string Tipo
-        {
-            get
-            {
-                return _tipo;
-            }
-            set
-            {
-                if (value == "Spesa" || value == "Ricavo")
-                {
-                    _tipo = value;
-                }
-            }
-        }
-
+    {        
+        public TipoTransazione Tipo { get; set; }
+        
         public DateTime DataTransazione { get; set; }
 
-        public string Categoria { get; set; }
+        public ICategory Categoria { get; set; }
 
         public string Descrizione { get; set; }
 
@@ -36,6 +22,7 @@ namespace esercizi.Net.BusinessLogic
         {
             string result = string.Empty;
             result += "Data transazione: " + DataTransazione + ",\n";
+            result += "Tipo transazione: " + Tipo + ",\n";
             result += "Categoria: " + Categoria + ",\n";
             result += "Descrizione: " + Descrizione + ",\n";
             result += "Importo: " + Importo + ".\n";
